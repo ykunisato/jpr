@@ -16,7 +16,7 @@ This is a Quarto template that assists you in creating a manuscript for Article 
 You can use this as a template to create an article for an AFT journal. To do this, use the following command:
 
 ```bash
-quarto use template quarto-journals/article-format-template
+quarto use template ykunisato/jpr
 ```
 
 This will install the extension and create an example qmd file and bibiography that you can use as a starting place for your article.
@@ -26,7 +26,7 @@ This will install the extension and create an example qmd file and bibiography t
 You may also use this format with an existing Quarto project or document. From the quarto project or document directory, run the following command to install this format:
 
 ```bash
-quarto add quarto-journals/article-format-template
+quarto add ykunisato/jpr
 ```
 
 ## Usage

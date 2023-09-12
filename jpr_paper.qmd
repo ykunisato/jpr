@@ -1,0 +1,133 @@
+---
+format: 
+  docx:
+    reference-doc: word_template/JPR.docx
+bibliography: references.bib
+editor: visual
+---
+
+# **Paper title: Subtitle**
+
+<!--# The title should reflect the content of the paper and should be around 12–15 words long.Subtitles should follow a colon (:) after the main title.The first letter of main words should be capitalized (conjunctions, articles, and prepositions of three or fewer letters should be written in lowercase).-->
+
+**Abstract**
+
+100--175 word
+
+**Keywords:**
+
+A, B, C, D, E
+
+<!--# Up to 5 words. -->
+
+{{< pagebreak >}}
+
+Clearly and concisely state what problems you are going to deal with in the paper. However, the heading "Introduction" will not be printed. Include a discussion of previous research and/or hypotheses[@Somatori2022].
+
+# Level 1
+
+<!--# Center the heading across the full page boldface font, without a period (.). Leave a space of one line above and below the title. The first letter of each main word should be capitalized. -->
+
+## **Level 2** 
+
+<!--# Align the heading flush left. Use boldface font, capitalize the first letter of each main word, and do not use a period at the end of the heading. Start the main text on a new line. -->
+
+<!--# Indent from the left. Use boldface font, and use a period at the end of the heading.The main text should start on the same line after entering two spaces with the first letter of the first word capitalized.-->
+
+**Level 3.** 1. Only the following three types of headings (Level 1 -- Level 3) are normally used in the main text. Headings should not be given at the beginning of the main text[@tidyverse].
+
+Topics should be divided into paragraphs according to the coherence of their content. Start each paragraph on a new line and indent about 10mm from the left[@Kato2020].
+
+2\. When ranking paragraphs with related content, number them consecutively with Arabic numerals, express the content in simple text, and start a new line for each new paragraph. Do not treat the paragraph as a heading by inserting a colon (:) or a space.
+
+3\. When ordering within a sentence or a paragraph, use letters in parentheses, (a)..., (b)..., and (c)..., and continue the sentence without starting a new line. Do not treat the subpoints as headings by inserting a colon or a space. The use of alternative marker styles such as (1), 1), i) and a) is not allowed.
+
+## **Level 2**
+
+The total number of lines per page should be approximately 25, although this will vary with text font and size.
+
+Equations can be written as shown in the following example of Bayes' theorem.
+
+$$
+p(A|B) = \frac{P(B|A)P(A)}{P(B)}
+$$
+
+Japanese Psychological Research (JPR), the flagship journal of the Japanese Psychological Association, is a peer-reviewed journal publishing high-impact research from all areas of scientific psychology. JPR publishes Original Articles, Brief Reports, and Reviews. JPR welcomes high quality articles from researchers in Japan and any part of the world, which employ novel approaches and contribute to advancing psychological research of broad interest and theoretical significance.
+
+Table 1
+
+\~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~ \~
+
+# Conflict of Interests 
+
+The authors declare no conflicts of interest associated with this manuscript.
+
+<!--# If there are no conflicts of interest, please state that there are no conflicts of interest; if there is a conflict of interest, please describe it at the end of the paper, making sure not to include any private information about the author. -->
+
+{{< pagebreak >}}
+
+# References
+
+::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+# Footnote(s)
+
+1\. The footnotes on the title page are printed in the footer of the title page in the publication. When using footnotes, they should be numbered in sequence with superscripts on the upper right of the relevant part (^1, 2, 3^). The following are examples of when and how to use title page footnotes.
+
+{{< pagebreak >}}
+
+Table 1
+
+*Tile of Table*
+
+```{r}
+#| message: false
+#| error: false
+#| echo: false
+library(tidyverse)
+library(gtsummary)
+
+tbl_svysummary_ex1 <-
+  survey::svydesign(~1, data = as.data.frame(Titanic), weights = ~Freq) |> 
+  tbl_svysummary(by = Survived, percent = "row", include = c(Class, Age)) 
+
+tbl_svysummary_ex1
+```
+
+*Note.*
+
+\**p* \< .05, \*\**p* \< .01, \*\*\**p* \< .001
+
+{{< pagebreak >}}
+
+Figure 1
+
+*Title of Figure*
+
+```{r}
+#| message: false
+#| error: false
+#| echo: false
+#| warning: false
+#| out-width: 10cm
+
+# create dummy data
+data <- data.frame(
+  Time=c("Pre","Post"),
+  mean=c(10,8),
+  se=c(1,0.8)
+)
+ 
+# Most basic error bar
+ggplot(data) +
+    geom_bar( aes(x=Time, y=mean),stat="identity",fill="grey") +
+    theme_classic() +
+    scale_y_continuous(expand=c(0,0)) +
+    geom_errorbar( aes(x=Time, ymin=mean-se, ymax=mean+se), width=0.1, colour="black", alpha=1, size=0.7)
+
+```
+
+*Note.*

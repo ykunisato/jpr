@@ -3,6 +3,7 @@ format:
   docx:
     reference-doc: word_template/JPR.docx
 bibliography: references.bib
+csl: apa.csl
 editor: visual
 ---
 
@@ -38,9 +39,9 @@ Clearly and concisely state what problems you are going to deal with in the pape
 
 Topics should be divided into paragraphs according to the coherence of their content. Start each paragraph on a new line and indent about 10mm from the left[@Kato2020].
 
-2\. When ranking paragraphs with related content, number them consecutively with Arabic numerals, express the content in simple text, and start a new line for each new paragraph. Do not treat the paragraph as a heading by inserting a colon (:) or a space.
+2\. When ranking paragraphs with related content, number them consecutively with Arabic numerals, express the content in simple text, and start a new line for each new paragraph. Do not treat the paragraph as a heading by inserting a colon (:) or a space[@Yoshimura2017].
 
-3\. When ordering within a sentence or a paragraph, use letters in parentheses, (a)..., (b)..., and (c)..., and continue the sentence without starting a new line. Do not treat the subpoints as headings by inserting a colon or a space. The use of alternative marker styles such as (1), 1), i) and a) is not allowed.
+3\. When ordering within a sentence or a paragraph, use letters in parentheses, (a)..., (b)..., and (c)..., and continue the sentence without starting a new line. Do not treat the subpoints as headings by inserting a colon or a space. The use of alternative marker styles such as (1), 1), i) and a) is not allowed[@Kunisato2012].
 
 ## **Level 2**
 
